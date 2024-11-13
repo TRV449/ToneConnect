@@ -23,6 +23,7 @@ load_dotenv()
 
 # SECRET_KEY 설정
 SECRET_KEY = os.getenv("SECRET_KEY")
+ipaddress = os.getenv("IP")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
@@ -33,7 +34,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     ".ap-northeast-2.compute.amazonaws.com",
     "127.0.0.1",
-    "54.180.247.88",
+    ipaddress,
     "localhost",
 ]
 
@@ -145,7 +146,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:3000",
     "http://0.0.0.0:3000",
     "http://0.0.0.0:8000",
-    "http://54.180.247.88",
+    ipaddress,
 ]
 
 CORS_ALLOW_CREDENTIALS = True
